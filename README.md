@@ -17,6 +17,14 @@
 
 初次使用时首先需要注册，然后才能登录相应账户。
 
+cd fisco
+bash nodes/127.0.0.1/start_all.sh
+cd python-sdk
+pyenv activate python-sdk
+python INIT.py
+python manage.py runserver 0.0.0.0:8000
+firefox http://localhost:8000/login/
+
 ## 加分项
 加分项的实现与代码说明请移步报告文件 `report.pdf` 的 Chapter2，简要说明如下：
 + 实现了附加功能：包括企业破产申请与处理、撤销交易、完备的身份验证、部分偿还、信任机构审批账单等功能；
